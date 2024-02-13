@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 18</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 18. La Bataille de Popularité des Jeux Vidéo</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+        // Code de départ
+        // Définition des jeux
+        let jeu1 = {
+            Titre: "Castle Quest",
+            AnnéeDeSortie: 1982,
+            Genre: "Aventure",
+            Score: 88,
+            affichage: function () {
+                console.log(`Titre: ${this.Titre}`);
+                console.log(`Année de Sortie: ${this.AnnéeDeSortie}`);
+                console.log(`Genre: ${this.Genre}`);
+                console.log(`Score: ${this.Score}`);
+            },
+            getPopularite: function () {
+                return (this.Score * this.AnnéeDeSortie) / 100;
+            }
+        };
+
+        let jeu2 = {
+            Titre: "Mystery Island",
+            AnnéeDeSortie: 1993,
+            Genre: "Arcade",
+            Score: 95,
+            affichage: function () {
+                console.log(`Titre: ${this.Titre}`);
+                console.log(`Année de Sortie: ${this.AnnéeDeSortie}`);
+                console.log(`Genre: ${this.Genre}`);
+                console.log(`Score: ${this.Score}`);
+            },
+            getPopularite: function () {
+                return (this.Score * this.AnnéeDeSortie) / 100;
+            }
+        };
+
+        // Fonction pour afficher les informations sur un jeu
+        function afficherJeu(jeu) {
+            console.log(`Titre: ${jeu.Titre}`);
+            console.log(`Année de Sortie: ${jeu.AnnéeDeSortie}`);
+            console.log(`Genre: ${jeu.Genre}`);
+            console.log(`Score: ${jeu.Score}`);
+        }
+
+        // Affichage des informations sur les jeux
+        console.log("Informations sur le premier jeu:");
+        afficherJeu(jeu1);
+        console.log("--------------------");
+        console.log("Informations sur le deuxième jeu:");
+        afficherJeu(jeu2);
+        console.log("--------------------");
+
+        // Comparaison de popularité entre les jeux
+        console.log(`Popularité du premier jeu: ${jeu1.getPopularite()}`);
+        console.log(`Popularité du deuxième jeu: ${jeu2.getPopularite()}`);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 21</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 21. Filtrage de la Collection de Jeux chez PixelBay</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+
+        const collection = [
+            {
+                titre: "Space Adventure",
+                anneeSortie: 1984,
+                genre: "Adventure"
+            },
+            {
+                titre: "Castle Quest",
+                anneeSortie: 1986,
+                genre: "Adventure"
+            },
+            {
+                titre: "Mystery Island",
+                anneeSortie: 1994,
+                genre: "Arcade"
+            },
+            {
+                titre: "Pacman",
+                anneeSortie: 1992,
+                genre: "Arcade"
+            },
+        ]
+        console.log(collection)
+
+        // Ajoutez ici les fonctions pour interagir avec la collection
+
+        // Classe les jeux selon l'année (date de sortie = avant 1990)
+        const annee = collection.filter(checkAnnee);
+        function checkAnnee(item) {
+            return item.anneeSortie < 1990
+        }
+        console.log(annee)
+
+        // Classe les jeux selon le genre (genre = Arcade)
+        const genre = collection.filter(checkGenre);
+        function checkGenre(item) {
+            return item.genre === "Arcade"
+        }
+        console.log(genre)
+
+
+    </script>
+</body>
+
+</html>

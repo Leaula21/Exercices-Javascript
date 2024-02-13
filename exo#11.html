@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 11</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 11. Les Promotions</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+
+        // Le prix d'origine du jeux a été défini à 15€
+
+        // Fonction pour la promotion d'été -20% 
+        function ete(prix, promo) {
+            let montantReduction = prix * promo / 100
+            let prixFinal = prix - montantReduction
+            return prixFinal
+        }
+        console.log("Prix après promotion d'été :", ete(15, 20));
+
+        // Fonction pour la promotion d'hiver -30%
+        function hiver(prix, promo) {
+            let montantReduction = prix * promo / 100
+            let prixFinal = prix - montantReduction
+            return prixFinal
+        }
+        console.log("Prix après promotion d'hiver :", hiver(15, 30));
+
+        // Fonction pour la promotion spéciale
+        function special(prix, promo) {
+            let montantReduction = prix * promo / 100
+            let prixFinal = prix - montantReduction
+            return prixFinal
+        }
+        console.log("Prix après promotions spéciales :", special(15, 50));  
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 7</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 7. Le Réapprovisionnement chez PixelBay</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+        // Code de départ
+        let stockCible = 100;
+        let jeuxEnStock = 0;
+        // ajout d'une variable de chaque livraison qui équivaut à 5
+        let livraison = 5
+
+        // Initiez un compteur pour le nombre de livraisons.
+        for (let count = 0; count <= stockCible; count += 1) {
+            console.log(count); //// Affichage du compteur 
+        }
+
+        // Tant que le stock n'atteint pas le niveau cible, ajoutez des jeux vidéo au stock et augmentez le compteur de livraisons.
+        while (jeuxEnStock < stockCible) {
+            jeuxEnStock += livraison;
+            console.log(jeuxEnStock); //// Affichage du stock allant de 5 en 5 
+        }
+
+        // Affichez le nombre total de livraisons une fois que le stock cible est atteint.
+        console.log("Nombre total de livraisons : " + jeuxEnStock); //// Affichage du nombre total de livraison 
+
+
+    </script>
+</body>
+
+</html>

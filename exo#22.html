@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Barre de Progression de Scroll chez PixelBay</title>
+    <style>
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            background-color: #7d00f1;
+            width: 100%;
+        }
+
+        body{
+            height: 100vh;
+            background-image: url('https://resize.elle.fr/original/var/plain_site/storage/images/loisirs/evasion/bretagne-ces-coins-secrets-en-bord-de-mer-parfaits-pour-vos-prochaines-vacances/96842668-1-fre-FR/Bretagne-ces-coins-secrets-en-bord-de-mer-parfaits-pour-vos-prochaines-vacances.jpg');
+            background-size: cover;
+           }
+
+    </style>
+</head>
+
+<body>
+    <!-- Votre contenu ici -->
+
+    <footer id="scrollBar"></footer>
+
+
+
+    <script>
+
+        window.onscroll = function () { scrollIndicator() }; // active la fonction qui affiche la barre de progression
+
+
+        function scrollIndicator() {
+            let scroll = document.body.scrollTop || document.documentElement.scrollTop; //Donne en pixel le scroll
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight; //Donne la taille d'un élèment
+            let scrolled = (scroll / height) * 100
+            document.getElementById("scrollBar").style.width = scrolled + "%"; //Avec le pourcentage du calcul entre le scroll et la taille, le width est changé
+        }
+    </script>
+</body>
+
+</html>

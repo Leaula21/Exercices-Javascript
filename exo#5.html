@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 5</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 5. Le Code Secret chez PixelBay</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+        // Code de départ
+        let codeSecret = prompt("Quel est le code secret utilisé?");
+        let codeName = "";
+
+        // Utilisation de switch case pour déterminer la signification du code et l'afficher.
+        switch (codeSecret) {
+            case "Alpha":
+                codeName = "Lancer la promotion de la semaine!";
+                break;
+            case "Bravo":
+                codeName = "Réorganiser la section des jeux rétro!";
+                break;
+            case "Charlie":
+                codeName = "Préparer la zone de démonstration pour les nouveaux arrivages!";
+                break;
+            case "Delta":
+                codeName = "Vérifier l'inventaire des accessoires!";
+            default:
+                codeName = "Code secret inconnu";
+        }
+        console.log(codeName);
+    </script>
+</body>
+
+</html>

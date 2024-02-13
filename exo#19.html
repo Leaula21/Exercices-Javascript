@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 19</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 19. Programmation de la Collection de Jeux</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+
+        // Fonction pour créer un jeu
+        function creerJeu(titre, anneeSortie, genre) {
+            return {
+                Titre: "Castle Quest",
+                AnnéeDeSortie: "1988",
+                Genre: "Adventure"
+            };
+        }
+
+        // Fonction pour afficher les détails des jeux dans une liste
+        function afficherListeJeux(listeJeux) {
+            console.log("Détails des jeux :");
+            listeJeux.forEach(jeu => {
+                console.log(`Titre: ${jeu.Titre}, Année de Sortie: ${jeu.AnnéeDeSortie}, Genre: ${jeu.Genre}`);
+            });
+        }
+
+        // Fonction pour calculer et afficher l'année moyenne de sortie des jeux dans une liste
+        function calculerMoyenneAnneesSortie(listeJeux) {
+            let totalAnnees = 0;
+            listeJeux.forEach(jeu => {
+                totalAnnees += jeu.AnnéeDeSortie;
+            });
+            let moyenneAnnees = totalAnnees / listeJeux.length;
+            console.log(`Année moyenne de sortie des jeux : ${moyenneAnnees}`);
+        }
+
+        // Création de la collection de jeux rétro
+        let jeuxRetro = [
+            creerJeu("Super Mario Bros.", 1985, "Plateforme"),
+            creerJeu("The Legend of Zelda", 1986, "Action-Aventure"),
+            creerJeu("Tetris", 1984, "Puzzle")
+        ];
+
+        // Création de la collection de jeux modernes
+        let jeuxModernes = [
+            creerJeu("The Witcher 3: Wild Hunt", 2015, "Action-RPG"),
+            creerJeu("Red Dead Redemption 2", 2018, "Action-Aventure"),
+            creerJeu("The Last of Us Part II", 2020, "Survival Horror"),
+            creerJeu("Cyberpunk 2077", 2020, "Action-RPG")
+        ];
+
+        // Affichage des détails des jeux rétro
+        console.log("Collection de jeux rétro :");
+        afficherListeJeux(jeuxRetro);
+        console.log("--------------------");
+
+        // Calcul et affichage de l'année moyenne de sortie des jeux rétro
+        calculerMoyenneAnneesSortie(jeuxRetro);
+        console.log("--------------------");
+
+        // Affichage des détails des jeux modernes
+        console.log("Collection de jeux modernes :");
+        afficherListeJeux(jeuxModernes);
+        console.log("--------------------");
+
+        // Calcul et affichage de l'année moyenne de sortie des jeux modernes
+        calculerMoyenneAnneesSortie(jeuxModernes);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 20</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 20. Analyse Avancée de la Collection de Jeux</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+
+        // Code de départ
+
+        let collection = [
+            // Votre code pour créer la collection de jeux
+            {
+                titre: "Space Adventure",
+                anneeSortie: 1984,
+                scores: [85, 87, 90, 78, 88]
+            },
+            {
+                titre: "Castle Quest",
+                anneeSortie: 1986,
+                scores: [90, 92, 88, 85, 91]
+            },
+            {
+                titre: "Mystery Island",
+                anneeSortie: 1990,
+                scores: [88, 91, 86, 90, 89]
+            },
+        ]
+
+        ///// Ajoutez ici les fonctions pour interagir avec la collection
+
+        // Fonction pour afficher les détails d'un jeu spécifique avec "afficherJeu(jeu)"
+        function afficherJeu(jeu) {
+            console.log(`Titre: ${jeu.titre}`);
+            console.log(`Année de Sortie: ${jeu.anneeSortie}`);
+            console.log(`Scores: ${jeu.scores}`);
+        }
+        // Affichage des détails de chaque jeu de la collection
+        afficherJeu(collection[0]);
+
+        ///// Pour afficher les autres jeux
+        // afficherJeu(collection[1]);
+        // afficherJeu(collection[2]);
+
+        // Fonction pour afficher les détails d'un jeu spécifique avec "afficherCollection(collection)"
+        function afficherCollection(collection) {
+            for (let i = 0; i < collection.length; i++) {
+                console.log(`Titre: ${collection[i].titre}`);
+                console.log(`Année de Sortie: ${collection[i].anneeSortie}`);
+                console.log(`Scores: ${collection[i].scores}`);
+            }
+        }
+        // Affichage des détails de chaque jeu de la collection
+        afficherCollection(collection);
+
+        // Fonction pour calculer la moyenne des scores du premier jeu avec "calculerMoyenneScore(jeu)"
+        function calculerMoyenneScore(jeu) {
+            // Somme des scores
+            let somme = 0;
+            for (let score of jeu.scores) {
+                somme += score;
+            }
+            // Calcul de la moyenne
+            let moyenne = somme / jeu.scores.length;
+            return moyenne;
+        }
+        let moyennePremierJeu = calculerMoyenneScore(collection[0]);
+        console.log(`Moyenne des scores pour ${collection[0].titre}: ${moyennePremierJeu}`);
+
+        // Fonction pour calculer la moyenne des scores pour l'ensemble de la collection avec "calculerMoyenneScoresCollection(collection)"
+        function calculerMoyenneScoreCollection(collection) {
+            // Somme des scores
+            let somme = 0;
+            // Nombre total de scores dans la collection
+            let nombreScores = 0;
+
+            // Parcourir chaque jeu dans la collection
+            for (let jeu of collection) {
+                // Pour chaque jeu, ajouter tous ses scores à la somme
+                for (let score of jeu.scores) {
+                    somme += score;
+                    nombreScores++; // Incrémenter le nombre de scores
+                }
+            }
+            // Calculer la moyenne en divisant la somme totale par le nombre total de scores
+            let moyenne = somme / nombreScores;
+            return moyenne;
+        }
+        // Calculer la moyenne des scores pour toute la collection
+        let moyenneCollection = calculerMoyenneScoreCollection(collection);
+        console.log(`Moyenne des scores pour toute la collection: ${moyenneCollection}`);
+    </script>
+</body>
+
+</html>

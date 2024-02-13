@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 17</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 17. Vérification des Jours Travaillés chez PixelBay</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+        // Initialisation de la liste des jours fériés
+
+        const joursFeries2020 = [
+            "2020-01-01",
+            "2020-04-13",
+            "2020-05-01",
+            "2020-05-08",
+            "2020-05-21",
+            "2020-06-01",
+            "2020-07-14",
+            "2020-08-15",
+            "2020-11-01",
+            "2020-11-11",
+            "2020-12-25"
+        ];
+        console.log(joursFeries2020);
+
+        // Déclaration de la fonction jourTravaille
+        function jourTravaille(date) {
+    let formattedDate = date.toISOString().slice(0, 10);
+
+    if (joursFeries2020.includes(formattedDate)) {
+        return "Le " + formattedDate + " est un jour férié en France.";
+    }
+
+    if (date.getDay() === 0 || date.getDay() === 6) {
+        return "Le " + formattedDate + " est un week-end.";
+    }
+
+    return "Le " + formattedDate + " est un jour travaillé.";
+}
+        // Test de la fonction
+        console.log(jourTravaille(new Date('2020-01-01'), joursFeries2020))
+
+    </script>
+</body>
+
+</html>

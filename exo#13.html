@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PixelBay - Konami Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #konami-message {
+            display: none;
+            font-size: 24px;
+            color: red;
+            margin-top: 50px;
+        }
+
+        /* Styles spécifiques au code Konami */
+        .konami {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bienvenue chez PixelBay</h1>
+    <div id="konami-message">Code Konami activé !</div>
+
+    <script>
+
+
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+        let konamiIndex = 0;
+
+        document.addEventListener('keydown', function (event) {
+            console.log('Touche pressée :', event.code);
+            // Vérifie si la touche enfoncée correspond à la prochaine touche du code Konami
+            if (event.code === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                console.log('Code Konami en cours :', konamiCode.slice(0, konamiIndex));
+                // Si code Konami a été entièrement saisi, déclenche l'effet
+                if (konamiIndex === konamiCode.length) {
+                    activateKonami();
+                }
+            } else {
+                console.log('Réinitialisation du code Konami');
+                // Réinitialise l'index du code Konami si une touche différente est pressée
+                konamiIndex = 0;
+            }
+        });
+
+        function activateKonami() {
+            // Affiche le message du code Konami
+            console.log('Code Konami activé !');
+            document.getElementById('konami-message').style.display = 'block';
+            // Ajoute la classe "konami" au body pour appliquer les styles spécifiques
+            document.body.classList.add('konami');
+        }
+
+
+    </script>
+</body>
+
+</html>

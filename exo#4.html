@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 4</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 4. La Gestion du Stock chez PixelBay</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+        // Code de départ
+        const CAPACITE_DE_LETAGERE = 10;
+        // Demandez à l'utilisateur combien de jeux vidéo sont arrivés en stock aujourd'hui en utilisant prompt().
+        let jeuxEnStock = Number(prompt("Combien de jeux vidéo avez-vous reçus en stock aujourd'hui ?"));
+        // Calculez combien d'étagères seront complètement remplies.
+        let etageresRemplies = jeuxEnStock / CAPACITE_DE_LETAGERE
+        console.log("Il y aura " + Math.floor(etageresRemplies) + " étagères remplies.")
+        // Calculez combien de jeux vidéo resteront après avoir rempli les étagères.
+        let jeuxVidéosrestants = jeuxEnStock % CAPACITE_DE_LETAGERE
+        console.log("Il y aura " + Math.floor(jeuxVidéosrestants) + " jeux vidéos restants.")
+        // Gérer le cas ou l'utilisateur indique 0
+        if (jeuxEnStock === 0) {
+            console.log("Aucune étagère ne peut être remplie")
+        } 
+    </script>
+</body>
+
+</html>

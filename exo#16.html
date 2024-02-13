@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 16</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 16. Gestion des Inventaires chez PixelBay</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+
+        // Déclarez un tableau inventaire contenant les noms de cinq articles différents disponibles dans le magasin PixelBay.
+        let inventaire = ["Space Adventure", "Castle Quest", "Mystery Island", "Robot Wars", "Jungle Journey"]
+        for (let i = 0; i < inventaire.length; i++) {
+        }
+        console.log(inventaire)
+
+        //   Ajoutez deux nouveaux articles à l'inventaire en utilisant "PUSH"
+        const more = inventaire.push("Racing Rush", "Pirate's Treasure")
+        console.log(inventaire)
+
+        // Supprimez le premier article de l'inventaire.
+        const article = inventaire.shift()
+        console.log(inventaire)
+
+        //  Utilisez une boucle pour afficher 
+        //  tous les articles de l'inventaire dans la console, chacun avec un préfixe "Article".
+        for (let i = 0; i < inventaire.length; i++) {
+            console.log(`Article: ${inventaire[i]}`)
+        }
+    </script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 12</title>
+    <style>
+        /*CSS si nécessaire*/
+    </style>
+</head>
+
+<body>
+    <h1>Exo 12. Compteur de Likes pour les Jeux chez PixelBay</h1>
+
+    <!-- Créer un Bouton : 
+    Ajoutez une balise <button> à votre HTML avec l'ID button pour permettre aux utilisateurs de liker. -->
+    <button id="button">
+    <!-- // Afficher le Compteur : 
+    Créez une balise (par exemple, <span> ou <div>) où le nombre de likes sera affiché. Donnez-lui l'ID compteur. -->
+        <span id="compteur">👍Like </span>
+    </button>
+
+
+    <script>
+        //// Incrémenter le Compteur : 
+
+        // Chaque clic sur le bouton doit incrémenter le compteur de likes et mettre à jour l'affichage.
+        let bouton = document.getElementById("button");
+        let compteur = document.getElementById("compteur");
+        let nombreDeLikes = 0;
+
+        // Ajouter un écouteur d'événements sur le bouton
+        bouton.addEventListener("click", function () {
+            // Incrémenter le nombre de likes à chaque clic
+            nombreDeLikes++;
+            // Mettre à jour le texte du compteur avec le nouveau nombre de likes
+            compteur.textContent = "👍 " + nombreDeLikes + " Likes";
+        });
+
+    </script>
+</body>
+
+</html>
